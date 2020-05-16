@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function MedApp() {
   return (
     <div className="App">
       This is Kaval's first git project
@@ -12,4 +13,4 @@ function App() {
 }
 
 
-export default App;
+export default MedApp;
