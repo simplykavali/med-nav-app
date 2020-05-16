@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from './components/Navigation/Navigation'
+import './MedApp.module.css';
+
 
 function MedApp() {
   return (
-    <div className="App">
-      This is Kaval's first git project
-      another line
-    </div> 
+    <>
+      <Navigation />
+      <div style={{ marginTop: '100px' }}>body </div>
+      <div>footer</div>
+    </>
   );
 }
 
