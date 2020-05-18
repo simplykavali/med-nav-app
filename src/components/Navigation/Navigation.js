@@ -23,14 +23,14 @@ const Navigation = (props) => {
         [
             { Title: "Home", LinkURL: "/home", childs: [] },
                 {
-                Title: "Resources & Policies", LinkURL: "/resource", childs: [
-                    { Title: "Resources 1", LinkURL: "/resource/1", col: 2, isExternal: true, header: true },
-                    { Title: "Resources 2", LinkURL: "/resource/2", col: 3, isExternal: true, header: false },
-                    { Title: "Resources 3", LinkURL: "/resource/1", col: 4, isExternal: true, header: false },
-                    { Title: "Resources 4", LinkURL: "/resource/1", col: 2, isExternal: false, header: true },
-                    { Title: "Resources 5", LinkURL: "/resource/1", col: 5, isExternal: true, header: false },
-                    { Title: "Resources 6", LinkURL: "/resource/1", col: 3, isExternal: true, header: false },
-                    { Title: "Resources 7", LinkURL: "/resource/1", col: 2, isExternal: true, header: false },
+                Title: "Resources & Policies", LinkURL: "/resources", childs: [
+                    { Title: "Resources 1", LinkURL: "/resources/1", col: 2, isExternal: true, header: true },
+                    { Title: "Resources 2", LinkURL: "/resources/2", col: 3, isExternal: true, header: false },
+                    { Title: "Resources 3", LinkURL: "/resources/1", col: 4, isExternal: true, header: false },
+                    { Title: "Resources 4", LinkURL: "/resources/1", col: 2, isExternal: false, header: true },
+                    { Title: "Resources 5", LinkURL: "/resources/1", col: 5, isExternal: true, header: false },
+                    { Title: "Resources 6", LinkURL: "/resources/1", col: 3, isExternal: true, header: false },
+                    { Title: "Resources 7", LinkURL: "/resources/1", col: 2, isExternal: true, header: false },
                 ]
             },
             {

@@ -1,9 +1,47 @@
 .footerItem{
+    
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+.footerItem .header{
+padding-bottom: 1rem;
+}
+
+.footerItem .header > a{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 32px;
     color: white;
     
+}
 
-   
+.footerItem .item > a{
     font-size: 24px;
-    font-weight: 400;
-    text-align: left;
+    font-weight: normal;
+    line-height: 20px;
+    padding-bottom: 0.5rem;
+    color: white;
+
+}
+.footerItem .navinternal:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    
+    margin: 10px 6px 0 -10px;
+    position: absolute;
+}
+.footerItem .navexternal:before {
+    content: "";
+    display: block;
+    background: url("../../../../src/assets/img/external-link-2-16.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    float: left;
+ 
+    margin: 10px 6px 0 -10px;
+    position: absolute;
 }

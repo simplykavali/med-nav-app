@@ -49,7 +49,7 @@ const NavigationMenu = (props) => {
         );
       }
       dropdown_menu.push(
-        <Col key={"Col"+props.id+i}>
+        <Col md='3' xs='12' key={"Col"+props.id+i}>
           {col_menu}
         </Col>
       )

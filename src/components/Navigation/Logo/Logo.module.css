@@ -5,11 +5,24 @@
     height: 90%;
     box-sizing: border-box;
     border-radius: 10px;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    
    
 }
 
 .Logo img{
     height: 100%;
+}
+@media (min-width: 500px) {
+    .Logo{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    }
+}
+@media (max-width: 499px) {
+    .Logo img{
+        width: 350px;
+    }
+    .Logo {
+        width: 300px;
+    }
 }
