@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+
 import Logo from './Logo/Logo';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
 import classes from './Navigation.module.css';
@@ -14,9 +14,42 @@ import {
 
 const Navigation = (props) => {
 
+    // State for navigation toggle
     const [isOpen, setIsOpen] = useState(false);
-
     const toggle = () => setIsOpen(!isOpen);
+
+    // State for top menu items
+    const [topMenuItems, SettopMenuItems] = useState(
+        [
+            { Title: "Home", LinkURL: "/home", childs: [] },
+                {
+                Title: "Resources & Policies", LinkURL: "/resource", childs: [
+                    { Title: "Resources 1", LinkURL: "/resource/1", col: 2, isExternal: true, header: true },
+                    { Title: "Resources 2", LinkURL: "/resource/2", col: 3, isExternal: true, header: false },
+                    { Title: "Resources 3", LinkURL: "/resource/1", col: 4, isExternal: true, header: false },
+                    { Title: "Resources 4", LinkURL: "/resource/1", col: 2, isExternal: false, header: true },
+                    { Title: "Resources 5", LinkURL: "/resource/1", col: 5, isExternal: true, header: false },
+                    { Title: "Resources 6", LinkURL: "/resource/1", col: 3, isExternal: true, header: false },
+                    { Title: "Resources 7", LinkURL: "/resource/1", col: 2, isExternal: true, header: false },
+                ]
+            },
+            {
+                Title: "About Medical", LinkURL: "/medical", childs: [
+                    { Title: "Medical 1", LinkURL: "/medical/1", col: 4, isExternal: true, header: false },
+                    { Title: "Medical 2", LinkURL: "/medical/2", col: 2, isExternal: false, header: false },
+                    { Title: "Medical 3", LinkURL: "/medical/3", col: 3, isExternal: false, header: false },
+                    { Title: "Medical 4", LinkURL: "/medical/3", col: 1, isExternal: true, header: false },
+                ]
+            }
+        ]
+
+    );
+    //console.log("here");
+    let TopMenu = topMenuItems.map((item, index) => {
+        //console.log(item.childs.length);
+        return <NavigationMenu id={"TopMenu"+index} key={"TopMenu"+index} title={item.Title} navurl={item.LinkURL} childs={item.childs} />
+    })
+
 
 
     return (
@@ -30,9 +63,7 @@ const Navigation = (props) => {
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="mr-auto" navbar>
 
-                    <NavigationMenu title='Home' navurl='/home' />
-                    <NavigationMenu title='Resources &amp; Policies' hasChildren navurl='/resource' />
-                    <NavigationMenu title='About Medical' hasChildren navurl='/medical' />
+                    {TopMenu}
                     <Search />
                 </Nav>
 

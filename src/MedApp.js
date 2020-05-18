@@ -1,5 +1,7 @@
 import React from 'react';
-import Navigation from './components/Navigation/Navigation'
+import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
+import Main from './components/Main/Main';
 import './MedApp.module.css';
 
 
@@ -7,8 +9,10 @@ function MedApp() {
   return (
     <>
       <Navigation />
-      <div style={{ marginTop: '100px' }}>body </div>
-      <div>footer</div>
+      <Main>
+
+      </Main>
+      <Footer />
     </>
   );
 }

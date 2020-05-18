@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    min-height: 360px;
+    background-color: #04223D;
+    padding-top: 2.5rem;
+}
+.footer .pfizerlogofooter {
+    
+    width: 164px;
+    box-sizing: border-box;
+}
+.footer .copyright{
+    color: white;
+    height: 30px;
+
+}
+@media (min-width: 500px) {
+    .footer .pfizerlogofooter {
+        margin-top:80px;
+        margin-left: 94px;
+    }
+    .footer .copyright{
+    padding-left: 30rem;
+    padding-right: 15rem;
+    }
+}
