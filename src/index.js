@@ -7,7 +7,7 @@ import MedApp from './MedApp';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter >
     <MedApp />
   </BrowserRouter>,
   document.getElementById('root')
