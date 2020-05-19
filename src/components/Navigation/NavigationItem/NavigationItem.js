@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink as RRNavLink, Link } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import { NavLink, DropdownItem } from 'reactstrap'; 
 
 const navigationItem = (props) =>{

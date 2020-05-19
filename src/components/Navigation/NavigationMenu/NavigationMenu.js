@@ -28,8 +28,11 @@ const NavigationMenu = (props) => {
       const grouped_children = props.childs.reduce(function (h, obj) {
         h[obj.col] = (h[obj.col] || []).concat(obj);
         return h;
-      }, {})
+      }, {});
+
+      console.log(grouped_children);
       setGroupedChildren(grouped_children);
+      
     }
   }, [props]);
 

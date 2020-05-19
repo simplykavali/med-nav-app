@@ -22,7 +22,7 @@ const Navigation = (props) => {
     const [topMenuItems, SettopMenuItems] = useState(
         [
             { Title: "Home", LinkURL: "/home", childs: [] },
-                {
+            {
                 Title: "Resources & Policies", LinkURL: "/resources", childs: [
                     { Title: "dddd 4", LinkURL: "/resources/1", col: 2, isExternal: true, header: true },
                     { Title: "dddd 4", LinkURL: "/resources/2", col: 3, isExternal: true, header: false },
@@ -47,11 +47,7 @@ const Navigation = (props) => {
 
     );
     //console.log("here");
-    let TopMenu = topMenuItems.map((item, index) => {
-        //console.log(item.childs.length);
-        return <NavigationMenu id={"TopMenu"+index} key={"TopMenu"+index} title={item.Title} navurl={item.LinkURL} childs={item.childs} />
-    })
-
+    //let TopMenu = 
 
 
     return (
@@ -65,7 +61,11 @@ const Navigation = (props) => {
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="mr-auto" navbar>
 
-                    {TopMenu}
+                    {topMenuItems.map((item, index) => {
+                        //console.log(item.childs.length);
+                        return <NavigationMenu id={"TopMenu" + index} key={"TopMenu" + index} title={item.Title} navurl={item.LinkURL} childs={item.childs} />
+                    })}
+
                     <Search />
                 </Nav>
 
